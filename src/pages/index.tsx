@@ -1,16 +1,4 @@
-import {
-  Link as ChakraLink,
-  Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
-  Box,
-  Input,
-  Container,
-  Heading,
-  Button,
-} from "@chakra-ui/react";
+import { Text, Box, Input, Container, Heading, Button } from "@chakra-ui/react";
 import { useState } from "react";
 // import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
 import Head from "next/head";
@@ -43,7 +31,6 @@ const Index = () => {
               `#${TweetName}しか勝たん\n#${TweetName}すき\n#${TweetName}好き\n#${TweetName}とうとい\n#${TweetName}尊い\n#${TweetName}かわいい\n#${TweetName}可愛い\n#1日1回の${TweetName}ちゃんかわいい\n#1日n回の${TweetName}ちゃん可愛い\n#${TweetName}可愛すぎてキュン死\n`
             )
           }
-
         >
           ツイートする
         </Button>
