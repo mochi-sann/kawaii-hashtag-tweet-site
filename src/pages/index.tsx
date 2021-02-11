@@ -5,52 +5,50 @@ import {
   List,
   ListIcon,
   ListItem,
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+  Box,
+  Input,
+  Container,
+  Heading,
+  Button,
+} from "@chakra-ui/react";
+import { useState } from "react";
+// import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
+import Head from "next/head";
+// import { Container } from "../components/Container";
 
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
+const Index = () => {
+  const [TweetName, setTweetName] = useState("");
 
-const Index = () => (
-  <Container height="100vh">
-    <Hero />
-    <Main>
-      <Text>
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>typescript</Code>.
-      </Text>
+  return (
+    <Container height="100vh">
+      <Head>
+        <title>かわいいハッシュタグツイート生成サイト</title>
+      </Head>
+      <Heading my="2">かわいいハッシュタグツイート生成サイト</Heading>
+      <Input
+        value={TweetName}
+        onChange={(e) => setTweetName(e.target.value)}
+        placeholder="ツイートする名前"
+      />
+      <Box m="4">
+        <Text as="pre">
+          {`#${TweetName}しか勝たん\n#${TweetName}すき\n#${TweetName}好き\n#${TweetName}とうとい\n#${TweetName}尊い\n#${TweetName}かわいい\n#${TweetName}可愛い\n#1日1回の${TweetName}ちゃんかわいい\n#1日n回の${TweetName}ちゃん可愛い\n#${TweetName}可愛すぎてキュン死\n`}
+        </Text>
+        <Button
+          my="4"
+          as="a"
+          href={
+            "https://twitter.com/intent/tweet?text=" +
+            encodeURIComponent(
+              `#${TweetName}しか勝たん\n#${TweetName}すき\n#${TweetName}好き\n#${TweetName}とうとい\n#${TweetName}尊い\n#${TweetName}かわいい\n#${TweetName}可愛い\n#1日1回の${TweetName}ちゃんかわいい\n#1日n回の${TweetName}ちゃん可愛い\n#${TweetName}可愛すぎてキュン死\n`
+            )
+          }
 
-      <List spacing={3} my={0}>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
-    </Main>
-
-    <DarkModeSwitch />
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
-    <CTA />
-  </Container>
-)
-
-export default Index
+        >
+          ツイートする
+        </Button>
+      </Box>
+    </Container>
+  );
+};
+export default Index;
