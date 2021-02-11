@@ -21,6 +21,7 @@ const Index = () => {
         <title>かわいいハッシュタグツイート生成サイト</title>
       </Head>
       <Heading my="2">かわいいハッシュタグツイート生成サイト</Heading>
+      <Link href="https://github.com/mochi-sann/kawaiihashutagtweet" color="blue.500">Githubのリポジトリ</Link>
       <Input
         value={TweetName}
         onChange={(e) => setTweetName(e.target.value)}
