@@ -21,7 +21,7 @@ const Index = () => {
         <title>かわいいハッシュタグツイート生成サイト</title>
       </Head>
       <Heading my="2">かわいいハッシュタグツイート生成サイト</Heading>
-      <Link href="https://github.com/mochi-sann/kawaiihashutagtweet" color="blue.500">Githubのリポジトリ</Link>
+      <Link href="https://github.com/mochi-sann/kawaiihashutagtweet" color="blue.5500">Githubのリポジトリ</Link>
       <Input
         value={TweetName}
         onChange={(e) => setTweetName(e.target.value)}
@@ -29,13 +29,13 @@ const Index = () => {
       />
       <Box m="4">
         <Text as="pre">
-          {`#${TweetName}しか勝たん\n#${TweetName}すき\n#${TweetName}好き\n#${TweetName}とうとい\n#${TweetName}尊い\n#${TweetName}かわいい\n#${TweetName}可愛い\n#1日1回の${TweetName}ちゃんかわいい\n#1日n回の${TweetName}ちゃん可愛い\n#${TweetName}可愛すぎてキュン死\n`}
+          {`#${TweetName}しか勝たん\n#${TweetName}すき\n#${TweetName}好き\n#${TweetName}とうとい\n#${TweetName}尊い\n#${TweetName}かわいい\n#${TweetName}可愛い\n#1日1回の${TweetName}ちゃんかわいい\n#1日n回の${TweetName}ちゃん可愛い\n#${TweetName}可愛すぎてキュン死\nhttps://kawaii-tweet.vercel.app`}
         </Text>
         <Link
           href={
             "https://twitter.com/intent/tweet?text=" +
             encodeURIComponent(
-              `#${TweetName}しか勝たん\n#${TweetName}すき\n#${TweetName}好き\n#${TweetName}とうとい\n#${TweetName}尊い\n#${TweetName}かわいい\n#${TweetName}可愛い\n#1日1回の${TweetName}ちゃんかわいい\n#1日n回の${TweetName}ちゃん可愛い\n#${TweetName}可愛すぎてキュン死\n`
+              `#${TweetName}しか勝たん\n#${TweetName}すき\n#${TweetName}好き\n#${TweetName}とうとい\n#${TweetName}尊い\n#${TweetName}かわいい\n#${TweetName}可愛い\n#1日1回の${TweetName}ちゃんかわいい\n#1日n回の${TweetName}ちゃん可愛い\n#${TweetName}可愛すぎてキュン死\n\nhttps://kawaii-tweet.vercel.app`
             )
           }
           isExternal
