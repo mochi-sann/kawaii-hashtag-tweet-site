@@ -46,13 +46,14 @@ const Index = () => {
       </Box>
       <Link
         href="https://github.com/mochi-sann/kawaiihashutagtweet"
-        color="blue.5500"
+        color="blue.500"
+        mr="2"
       >
         Githubのリポジトリ
       </Link>
       <Link
         href="https://github.com/DevelopersPackages-org/KawaiiHashTweetGenerator"
-        color="blue.5500"
+        color="blue.500"
       >
         移植元のGithubのリポジトリ
       </Link>{" "}
@@ -62,7 +63,7 @@ const Index = () => {
       under{" "}
       <Link
         href="https://github.com/mochi-sann/kawaiihashutagtweet/blob/main/LICENSE"
-        color="blue.5500"
+        color="blue.500"
       >
         Mit+3 License
       </Link>
