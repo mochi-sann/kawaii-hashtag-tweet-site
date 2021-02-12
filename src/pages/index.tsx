@@ -21,10 +21,6 @@ const Index = () => {
         <title>かわいいハッシュタグツイート生成サイト</title>
       </Head>
       <Heading my="2">かわいいハッシュタグツイート生成サイト</Heading>
-      <Link href="https://github.com/mochi-sann/kawaiihashutagtweet" color="blue.5500">Githubのリポジトリ</Link>　　<Link href="https://github.com/DevelopersPackages-org/KawaiiHashTweetGenerator" color="blue.5500">移植元のGithubのリポジトリ</Link> <br />
-      Copyright (c) 2021 Haruka Sato, mochi <br />
-      Forked: Copyright (c) 2021 Haruka Sato  <br />
-      under <Link href="https://github.com/mochi-sann/kawaiihashutagtweet/blob/main/LICENSE" color="blue.5500">Mit+3 License</Link>
       <Input
         value={TweetName}
         onChange={(e) => setTweetName(e.target.value)}
@@ -48,6 +44,28 @@ const Index = () => {
           </Button>
         </Link>
       </Box>
+      <Link
+        href="https://github.com/mochi-sann/kawaiihashutagtweet"
+        color="blue.5500"
+      >
+        Githubのリポジトリ
+      </Link>
+      <Link
+        href="https://github.com/DevelopersPackages-org/KawaiiHashTweetGenerator"
+        color="blue.5500"
+      >
+        移植元のGithubのリポジトリ
+      </Link>{" "}
+      <br />
+      Copyright (c) 2021 Haruka Sato, mochi <br />
+      Forked: Copyright (c) 2021 Haruka Sato <br />
+      under{" "}
+      <Link
+        href="https://github.com/mochi-sann/kawaiihashutagtweet/blob/main/LICENSE"
+        color="blue.5500"
+      >
+        Mit+3 License
+      </Link>
     </Container>
   );
 };
